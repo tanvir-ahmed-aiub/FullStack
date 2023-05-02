@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script>
+		var app = angular.module("my-app",[]);
+		app.controller('postsCtrl',function($scope,$http){
+			$http.get("https://localhost:44309/api/posts/1").then(function(resp){
+			debugger;
+				$scope.post = resp.data;
+			},
+			function(err){
+			debugger;
+			});
+		});
+		
+	</script>
+	<body ng-app="my-app">
+		<div ng-controller="postsCtrl">
+			<h2>{{post.Title}}</h2>
+			<p>{{post.Description}}</p>
+			<b>Posted By: {{post.PostedBy}} on {{post.Date}}</b>
+		</div>
+	</body>
+</html>

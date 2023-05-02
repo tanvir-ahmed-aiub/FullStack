@@ -1,0 +1,17 @@
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\bin\Debug\DAL.dll.config
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\bin\Debug\DAL.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\bin\Debug\DAL.pdb
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\obj\Debug\DAL.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\obj\Debug\DAL.pdb
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\obj\Debug\DAL.Migrations.intiDB.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\obj\Debug\DAL.Migrations.TokenDb.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\obj\Debug\DAL.Migrations.PostIdNullable.resources
+C:\Users\Tanvir Ahmed\Desktop\.NET\FullStack\PostComment\DAL\obj\Debug\DAL.Migrations.TokenUserRelation.resources

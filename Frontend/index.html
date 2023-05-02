@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script>
+		var app=angular.module("my-app",[]);
+		//app.controller('name',function(){});
+		app.controller('frstCtrl',function($scope){
+			$scope.name= "Abir";
+		});
+		app.controller('scndCtrl',function($scope){
+			$scope.name="Tanvir";
+		});
+		app.controller('thrdCtrl',function($scope){
+			$scope.names=["Tanvr","Abir","Rahim","Karim"];
+		});
+		app.controller('loginCtrl',function($scope){
+			$scope.login=function(){
+				var v = $scope.l;
+				debugger;
+				
+			};
+		});
+		
+	</script>
+	<body ng-app="my-app">
+		<div ng-controller="frstCtrl">
+			{{name}}
+		</div>
+		<div ng-controller="scndCtrl">
+		  <input type="text" ng-model="name">
+		  <p>{{name}}</p>
+		  <p ng-bind="name"></p>		  
+		</div>
+		<div ng-controller="thrdCtrl">
+			<ul>
+				<li ng-repeat="n in names">{{n}}</li>
+			</ul>
+			<table border=1>
+				<tr ng-repeat="n in names">
+					<td>{{n}}</td>
+				</tr>
+			<table>
+		</div>
+		
+		<div ng-controller="loginCtrl">
+			<form ng-submit="login()">
+				<input type="text" ng-model="l.Uname" placeholder="Username"> <br>
+				<input type="password" ng-model="l.Pass" placeholder = "Password"> <br>
+				<input type="submit">
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script>
+		var app = angular.module("my-app",[]);
+		
+		app.factory('interceptor',[function(){
+			var interceptor = {
+				request:function(config){
+					config.headers.Authorization = localStorage.getItem("tkey");
+					debugger;
+					return config;
+				},
+				response:function(response){
+					debugger;
+					return response;
+				}
+			};
+			return interceptor;
+		}]);
+		
+		app.config(function($httpProvider){
+			$httpProvider.interceptors.push('interceptor');
+		});
+		
+		app.controller('loginCtrl',function($scope,$http){
+			$scope.login=function(){
+				var v = $scope.l;
+				$http.post("https://localhost:44309/api/login",v).then(function(resp){
+					localStorage.setItem("tkey",resp.data.TKey);
+				},function(err){
+				
+				});
+				
+				
+			};
+		});
+		app.controller('postCmntCtrl',function($scope,$http){
+			$scope.load=function(){
+				//alert("OK");
+				$http.get("https://localhost:44309/api/posts/1/comments").then(function(resp){
+					$scope.post = resp.data;
+				},function(err){
+					$scope.msg = err.data.Msg;
+				});
+			};
+			
+		});
+		
+	</script>
+	<body ng-app="my-app">
+		<div ng-controller="loginCtrl">
+			<form ng-submit="login()">
+				<input type="text" ng-model="l.Uname" placeholder="Username"> <br>
+				<input type="password" ng-model="l.Password" placeholder = "Password"> <br>
+				<input type="submit">
+			</form>
+		</div>
+		
+		<div ng-controller="postCmntCtrl">
+			<h2>{{msg}}</h2>
+			<button ng-click="load()">Load<button>
+			<p>{{post.Title}} by {{post.PostedBy}}</p>
+			<ul>	
+				<li ng-repeat="c in post.Comments">
+					{{c.CommentText}} <sub>{{c.CommentedBy}} [{{c.Time}}]</sub>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
